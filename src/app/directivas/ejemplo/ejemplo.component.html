@@ -1,0 +1,51 @@
+<div>
+    <h1 ngClass="texto">ejemplo de las directivas en angular</h1>
+
+    <h2  [ngClass]="texto2">{{texto2}}</h2>
+    
+    <p [ngStyle]="{color: 'blue'}">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<br>
+    Ab doloribus placeat magnam ipsa dolorem blanditiis voluptates laborum laudantium <br>
+    voluptatum qui iure modi temporibus eaque ratione sapiente delectus aspernatur, quisquam error!"</p>
+
+</div>
+
+<div>
+    <select (change)="changemodule($event)" >
+        <option value="animales">animales</option>
+        <option value="flores">flores</option>
+        <option value="bolsos">bolsos</option>
+    </select>
+
+    @if(nombre== 'animales'){
+        <h3>{{nombre}}</h3>
+        <ul >
+            @for(item of cajalist(); track item.id){
+                <li>{{item.name}}</li>
+              <!--   @switch (item.raza) {
+                    @case ('perro') {
+                       <Li style="background-color: rgb(77, 133, 238);">{{item.name}}</Li>
+                    }
+                    @default{
+                        DEFAUL PERRO
+                    }
+
+                } -->
+            }
+        </ul>
+    }@else  if(nombre == 'flores'){
+        <h3>{{nombre}}</h3>
+        <ul>
+            @for(item of cajaflor(); track item.id){
+                <li>{{item.name}}</li>
+            }
+        </ul>
+    }@else{
+        <h3>agotados</h3>
+
+    }
+</div>
+
+<input type="texto" [(ngModel)]="title">
+<h2>{{title}}</h2>
+
+

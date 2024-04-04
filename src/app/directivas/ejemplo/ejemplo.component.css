@@ -1,0 +1,16 @@
+.texto{
+    color: rgb(172, 62, 186);
+    text-align: center;
+}
+.texto2{
+    text-decoration: line-through;
+    color: blue;
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+ul li{
+    list-style: none;
+}
